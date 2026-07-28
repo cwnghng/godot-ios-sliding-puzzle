@@ -23,6 +23,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
 
+[environment]
+
+default_clear_color=Color(0.1, 0.12, 0.15, 1)
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
@@ -35,3 +39,4 @@ pointing/emulate_touch_from_mouse=true
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

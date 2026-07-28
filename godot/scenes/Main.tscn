@@ -1,53 +1,67 @@
 [gd_scene format=3 uid="uid://main"]
 
-[ext_resource type="Script" path="res://scripts/Main.gd" id="1_main"]
-[ext_resource type="Script" path="res://scripts/PuzzleBoard.gd" id="2_board"]
+[ext_resource type="Script" uid="uid://dwo3rbdld8h1c" path="res://scripts/Main.gd" id="1_main"]
+[ext_resource type="Script" uid="uid://bf8tgfu1676rv" path="res://scripts/PuzzleBoard.gd" id="2_board"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1"]
 font_size = 32
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=359224585]
 script = ExtResource("1_main")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1127387441]
 
-[node name="PuzzleBoard" type="Control" parent="CanvasLayer"]
+[node name="Background" type="ColorRect" parent="CanvasLayer" unique_id=2001000001]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.10, 0.12, 0.15, 1)
+
+[node name="PuzzleBoard" type="Control" parent="CanvasLayer" unique_id=1020930991]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("2_board")
 
-[node name="MoveCounterLabel" type="Label" parent="CanvasLayer"]
-layout_mode = 3
+[node name="MoveCounterLabel" type="Label" parent="CanvasLayer" unique_id=337906404]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_top = 20.0
 offset_left = -100.0
+offset_top = 20.0
 offset_right = 100.0
 offset_bottom = 60.0
+grow_horizontal = 2
 text = "Moves: 0"
 label_settings = SubResource("LabelSettings_1")
 horizontal_alignment = 1
 
-[node name="WinOverlay" type="Control" parent="CanvasLayer"]
+[node name="WinOverlay" type="Control" parent="CanvasLayer" unique_id=36594149]
 visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="WinBackground" type="ColorRect" parent="CanvasLayer/WinOverlay"]
-layout_mode = 3
+[node name="WinBackground" type="ColorRect" parent="CanvasLayer/WinOverlay" unique_id=1220223944]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 0.7)
 
-[node name="WinLabel" type="Label" parent="CanvasLayer/WinOverlay"]
-layout_mode = 3
+[node name="WinLabel" type="Label" parent="CanvasLayer/WinOverlay" unique_id=550432857]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -57,12 +71,14 @@ offset_left = -150.0
 offset_top = -80.0
 offset_right = 150.0
 offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "You solved it!"
 label_settings = SubResource("LabelSettings_1")
 horizontal_alignment = 1
 
-[node name="MovesLabel" type="Label" parent="CanvasLayer/WinOverlay"]
-layout_mode = 3
+[node name="MovesLabel" type="Label" parent="CanvasLayer/WinOverlay" unique_id=1797268024]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -72,12 +88,14 @@ offset_left = -100.0
 offset_top = -20.0
 offset_right = 100.0
 offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Moves: 0"
 label_settings = SubResource("LabelSettings_1")
 horizontal_alignment = 1
 
-[node name="RestartButton" type="Button" parent="CanvasLayer/WinOverlay"]
-layout_mode = 3
+[node name="RestartButton" type="Button" parent="CanvasLayer/WinOverlay" unique_id=738155966]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -87,4 +105,6 @@ offset_left = -80.0
 offset_top = 40.0
 offset_right = 80.0
 offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Play Again"
